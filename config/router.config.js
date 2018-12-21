@@ -1,5 +1,6 @@
-import shop from './yuedu/index.js';
-
+import shop from './yuedu/shop';
+import user from './yuedu/user';
+console.log('shop...', shop, user);
 export default [
   // user
   {
@@ -44,6 +45,7 @@ export default [
         ],
       },
       shop,
+      user,
       // forms
       {
         path: '/form',

@@ -34,8 +34,11 @@ export default {
   'menu.account.center': '个人中心',
   'menu.account.settings': '个人设置',
   'menu.account.trigger': '触发报错',
-  'menu.shop':'商店',
-  'menu.shop.first':'商店第一',
-  'menu.shop.second':'商店第二',
-  'menu.shop.third':'商店第三',
+  'menu.account.logout': '退出登录',
+  'menu.shop': '商店',
+  'menu.shop.first': '第一个商店',
+  'menu.shop.second': '第二个商店',
+  'menu.shop.third': '第三个商店',
+  'menu.shop.add': '新增店铺',
+  'menu.shop.list': '店铺列表'
 };

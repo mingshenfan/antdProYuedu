@@ -88,7 +88,7 @@ class LoginPage extends Component {
                 {
                   required: true,
                   message: formatMessage({ id: 'validation.userName.required' }),
-                },
+                }
               ]}
             />
             <Password

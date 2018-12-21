@@ -1,4 +1,5 @@
 import { stringify } from 'qs';
+import {host} from './config';
 import request from '@/utils/request';
 
 export async function queryProjectNotice() {
@@ -104,14 +105,14 @@ export async function updateFakeList(params) {
 }
 
 export async function fakeAccountLogin(params) {
-  return request('/api/login/account', {
+  return request(`${host}/users/login`, {
     method: 'POST',
     body: params,
   });
 }
 
 export async function fakeRegister(params) {
-  return request('/api/register', {
+  return request(`${host}/users/register`, {
     method: 'POST',
     body: params,
   });

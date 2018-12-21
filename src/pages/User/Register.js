@@ -93,6 +93,7 @@ class Register extends Component {
     e.preventDefault();
     const { form, dispatch } = this.props;
     form.validateFields({ force: true }, (err, values) => {
+      console.log('values', values);
       if (!err) {
         const { prefix } = this.state;
         dispatch({
@@ -183,7 +184,7 @@ class Register extends Component {
           <FormattedMessage id="app.register.register" />
         </h3>
         <Form onSubmit={this.handleSubmit}>
-          <FormItem>
+          {/* <FormItem>
             {getFieldDecorator('mail', {
               rules: [
                 {
@@ -197,6 +198,18 @@ class Register extends Component {
               ],
             })(
               <Input size="large" placeholder={formatMessage({ id: 'form.email.placeholder' })} />
+            )}
+          </FormItem> */}
+          <FormItem>
+            {getFieldDecorator('username', {
+              rules: [
+                {
+                  required: true,
+                  message: formatMessage({ id: 'validation.username.required' }),
+                }
+              ],
+            })(
+              <Input size="large" placeholder={formatMessage({ id: 'form.username.placeholder' })} />
             )}
           </FormItem>
           <FormItem help={help}>
@@ -260,7 +273,7 @@ class Register extends Component {
                 <Option value="86">+86</Option>
                 <Option value="87">+87</Option>
               </Select>
-              {getFieldDecorator('mobile', {
+              {getFieldDecorator('phone', {
                 rules: [
                   {
                     required: true,
@@ -280,7 +293,7 @@ class Register extends Component {
               )}
             </InputGroup>
           </FormItem>
-          <FormItem>
+          {/* <FormItem>
             <Row gutter={8}>
               <Col span={16}>
                 {getFieldDecorator('captcha', {
@@ -310,7 +323,7 @@ class Register extends Component {
                 </Button>
               </Col>
             </Row>
-          </FormItem>
+          </FormItem> */}
           <FormItem>
             <Button
               size="large"
